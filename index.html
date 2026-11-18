@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maison Rosé – Beauty Salon & Spa</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="logo" href="#home">Maison Rosé</a>
+<button class="menu" id="menu" aria-label="Menu">☰</button>
+<div class="links" id="links">
+<a href="#home">Home</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#team">Team</a><a href="#book">Contact</a>
+<a class="btn" href="#book" style="padding:9px 20px">Book now</a>
+</div></nav></div></header>
+
+<main>
+<section class="hero" id="home"><div class="wrap">
+<div>
+<span class="eyebrow">Beauty salon & spa</span>
+<h1>Where you leave <em>glowing</em></h1>
+<p>Hair, skin, nails and lashes by a team of passionate specialists. Relax, unwind and step out feeling like the best version of you.</p>
+<div class="cta"><a class="btn" href="#book">Book an appointment</a><a class="btn ghost" href="#services">View services</a></div>
+</div>
+<div class="art" aria-hidden="true">✿</div>
+</div>
+<div class="wrap"><div class="stats">
+<div class="stat"><b>12+</b><span>Years of experience</span></div>
+<div class="stat"><b>8k+</b><span>Happy clients</span></div>
+<div class="stat"><b>4.9★</b><span>Average rating</span></div>
+<div class="stat"><b>6</b><span>Expert stylists</span></div>
+</div></div></section>
+
+<section><div class="wrap">
+<span class="eyebrow">Why Maison Rosé</span>
+<h2>Care, crafted for you</h2>
+<p class="sub">Every visit starts with a consultation so your treatment fits your style, skin and lifestyle.</p>
+<div class="feat">
+<div class="card"><div class="ic">🌿</div><h3>Gentle products</h3><p>Premium, cruelty-free brands chosen for results and kindness to your skin.</p></div>
+<div class="card"><div class="ic">✂️</div><h3>Expert artists</h3><p>Certified stylists and therapists who keep up with every new technique.</p></div>
+<div class="card"><div class="ic">🫖</div><h3>Calm atmosphere</h3><p>Complimentary tea, soft music and a space designed to help you switch off.</p></div>
+<div class="card"><div class="ic">🧼</div><h3>Spotless hygiene</h3><p>Sterilised tools and fresh linen for every single client, every time.</p></div>
+</div></div></section>
+
+<section class="alt" id="services"><div class="wrap">
+<span class="eyebrow">Services & prices</span>
+<h2>Treatments menu</h2>
+<p class="sub">Transparent pricing, no surprises. Tap “Book” on any service to pre-fill your appointment.</p>
+<div class="tabs" id="tabs"></div>
+<div id="svcs"></div>
+<p style="color:var(--mute);font-size:.85rem">Prices may vary slightly with hair length or product needs. Gift vouchers are available in the salon.</p>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+<span class="eyebrow">Gallery</span>
+<h2>Our work</h2>
+<p class="sub">A glimpse of recent transformations. Filter by category and tap a tile to enlarge.</p>
+<div class="tabs" id="gtabs"></div>
+<div class="grid" id="grid"></div>
+</div></section>
+
+<section class="alt" id="team"><div class="wrap">
+<span class="eyebrow">The team</span>
+<h2>Meet your artists</h2>
+<p class="sub">Choose a favourite when booking or let us match you with the right specialist.</p>
+<div class="team" id="teamgrid"></div>
+<div class="card" style="margin-top:28px;text-align:center"><p class="quote">“The most relaxing salon I’ve ever visited. My hair has never looked better!”</p><p style="margin-top:8px">– Elira, regular client</p></div>
+</div></section>
+
+<section id="book"><div class="wrap">
+<span class="eyebrow">Book & contact</span>
+<h2>Reserve your visit</h2>
+<p class="sub">Choose your treatment, date and time, or send us a question. We reply within one working day.</p>
+<div class="bk">
+<div>
+<div class="tabs"><button class="tab on" id="tb1" type="button">Book appointment</button><button class="tab" id="tb2" type="button">Send a message</button></div>
+<form id="bform" novalidate>
+<label for="bs" style="margin-top:0">Service</label><select id="bs"></select><div class="err" id="e_bs"></div>
+<div class="row"><div><label for="bst">Stylist</label><select id="bst"></select></div>
+<div><label for="bd">Date</label><input type="date" id="bd"><div class="err" id="e_bd"></div></div></div>
+<label>Time</label><div class="slots" id="slots"></div><div class="err" id="e_t"></div>
+<div class="row"><div><label for="bn">Full name</label><input id="bn" autocomplete="name"><div class="err" id="e_bn"></div></div>
+<div><label for="bp">Phone</label><input id="bp" type="tel" autocomplete="tel"><div class="err" id="e_bp"></div></div></div>
+<label for="be">Email</label><input id="be" type="email" autocomplete="email"><div class="err" id="e_be"></div>
+<label for="bnote">Notes (optional)</label><textarea id="bnote" rows="3" placeholder="Allergies, inspiration, special requests…"></textarea>
+<div class="sum"><span id="sumn">Select a service</span><span id="sump"></span></div>
+<button class="btn" style="width:100%;margin-top:18px" type="submit">Confirm booking</button>
+</form>
+<form id="cform" novalidate hidden>
+<label for="cn" style="margin-top:0">Name</label><input id="cn"><div class="err" id="e_cn"></div>
+<label for="ce">Email</label><input id="ce" type="email"><div class="err" id="e_ce"></div>
+<label for="cm">Message</label><textarea id="cm" rows="5"></textarea><div class="err" id="e_cm"></div>
+<button class="btn" style="width:100%;margin-top:18px" type="submit">Send message</button>
+</form>
+<div class="card ok" id="done" hidden></div>
+</div>
+<aside class="card info">
+<h3>Visit us</h3>
+<p style="margin-top:12px"><b>Address</b>12 Rose Garden Street, City Centre</p>
+<p><b>Phone</b><a href="tel:+0000000000">+00 000 000 000</a></p>
+<p><b>Email</b><a href="mailto:enkeleanaramaja38@gmail.com">hello@maisonrose.example</a></p>
+<b style="margin-bottom:6px">Opening hours</b>
+<table><tr><td>Mon – Fri</td><td>09:00 – 19:00</td></tr><tr><td>Saturday</td><td>09:00 – 17:00</td></tr><tr><td>Sunday</td><td>Closed</td></tr></table>
+<p style="margin-top:14px;font-size:.85rem">Please give 24 hours’ notice to cancel or reschedule.</p>
+</aside>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">
+<div class="logo">Maison Rosé</div>
+<div class="ft"><a href="#home">Home</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#book">Book</a></div>
+<div>© 2026 Maison Rosé Beauty Salon. All rights reserved.</div>
+</div></footer>
+
+<div class="lb" id="lb"><button id="lbx" aria-label="Close">✕</button><div class="big" id="lbbig"></div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
